@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Topcinema</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6 logo"><a href="/">TopCinema</a></h1>
+        <div class="logo-subtitle">
+          <h2 class="subtitle">あなたのトップ10教えてください〜映画愛好家が生の声を届ける絶好の機会〜</h2>
+        </div>
+        <div class="user_nav grid-6">
+          <a class="post" href="/tweets/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <p>
+        Copyright Topcinema 2023.
+      </p>
+    </footer>
+  </body>
+</html>

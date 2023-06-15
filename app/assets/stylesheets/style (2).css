@@ -1,0 +1,12 @@
+body {
+  background-color: hsl(183, 79%, 52%); /* エメラルドグリーン */
+  text-align: center;
+}
+
+.logo {
+  font-size: 150px;
+  font-weight: bold;
+  color: white;
+  margin-top: 200px;
+  text-align: center;
+}
