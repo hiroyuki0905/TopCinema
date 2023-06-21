@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Topcinema</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8" />
+    <title>TOP CINEMA</title>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <!-- ヘッダー -->
     <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6 logo"><a href="/">TopCinema</a></h1>
-        <div class="logo-subtitle">
-          <h2 class="subtitle">あなたのトップ10教えてください〜映画愛好家が生の声を届ける絶好の機会〜</h2>
-        </div>
-        <div class="user_nav grid-6">
-          <a class="post" href="/tweets/new">投稿する</a>
-        </div>
+      <div class="heading">
+        <h1 class="logo"><a href="index.html">TOP CINEMA</a></h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+          <li class="nav-lists__list"><a href="service.html">新規登録</a></li>
+          <li class="nav-lists__list"><a href="news.html">ログイン</a></li>
+          <li class="nav-lists__list"><a href="contact.html">サービス</a></li>
+          <li class="nav-lists__list"><a href="ranking.html">ランキング</a></li>
+          <!-- ランキングページへのリンクを追加 -->
+        </ul>
       </div>
     </header>
+
+    <!-- トップページのメイン -->
+    <div class="index-main">
+      <div class="hero">
+        <img class="hero-image" src="<%= asset_path('hero.jpg') %>">
+        <div class="hero-items">
+          <div class="hero-text">
+            <div class="hero-text__main">TOP CINEMA</div>
+            <div class="hero-text__sub">
+              あなたのトップ10教えてください〜映画愛好家が生の声を届ける絶好の機会〜
+            </div>
+          </div>
+          <div class="service-btn">
+            <a href="service.html">ランキング</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <%= yield %>
-    <footer>
-      <p>
-        Copyright Topcinema 2023.
-      </p>
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="copyright">Copyright©️2022 TECHCAMP</div>
     </footer>
   </body>
 </html>

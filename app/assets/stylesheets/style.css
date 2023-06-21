@@ -1,0 +1,103 @@
+/******************************************************** 
+　ヘッダー
+********************************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1366px;
+  padding: 0 100px 0 30px;
+  background-color: #0fb4ce;
+  height: 70px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 100px;
+}
+
+.nav-lists {
+  height: 100px;
+  display: flex;
+}
+
+.nav-lists__list {
+  margin-left: 70px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100px;
+}
+
+/******************************************************** 
+　フッター
+********************************************************/
+.footer {
+  width: 100%;
+  height: 70px;
+  background-color: #0fb4ce;
+}
+
+.copyright {
+  line-height: 70px;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+}
+
+/******************************************************** 
+　トップページ 
+********************************************************/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 30%;
+}
+
+.hero-items {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: calc(50% - 35px);
+  width: 100%;
+  padding: 0 60px;
+}
+
+.hero-text__main {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.hero-text__sub {
+  margin-top: 10px;
+  padding-left: 6px;
+  font-size: 20px;
+}
+
+.service-btn {
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.service-btn a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+}
