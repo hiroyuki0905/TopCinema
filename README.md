@@ -1,24 +1,55 @@
-# README
+db 設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Users_table
 
-Things you may want to cover:
+| Column                | Type              | Option                     |
+| --------------------- | ----------------- | -------------------------- |
+| nickname              | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| email                 | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| password              | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| encrypted_password    | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| created_at            | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many : movies
+- has_many :
 
-* Configuration
+## Movies_table
 
-* Database creation
+| Column                | Type              | Option                     |
+| --------------------- | ----------------- | -------------------------- |
+| id                    | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| title                 | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| director              | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| genre                 | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| release_year          | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| created_at            | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
 
-* Database initialization
+## Rankings_table
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column                | Type              | Option                     |
+| --------------------- | ----------------- | -------------------------- |
+| id                    | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| user_id               | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| title                 | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| movies                | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+|                       | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
+| created_at            | string            | null: false                |
+| --------------------- | ----------------- | -------------------------- |
