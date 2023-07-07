@@ -17,7 +17,7 @@
           <li class="nav-lists__list"><%= link_to "新規登録", new_user_registration_path %></li>
           <li class="nav-lists__list"><%= link_to "ログイン", new_user_session_path %></li>
           <li class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-          <!-- ランキングページへのリンクを追加 -->
+          <li class="nav-lists__list"><%= link_to "ランキング", search_tweets_path %></li>
         </ul>
       </div>
     </header>
@@ -34,12 +34,12 @@
             </div>
           </div>
           <div class="service-btn">
-            <a href="service.html">ランキング</a>
+            <a href="<%= search_tweets_path %>">ランキング</a>
           </div>
         </div>
       </div>
     </div>
-    <%= yield %>
+    <%= yield %>˜
     <!-- フッター -->
     <footer class="footer">
       <div class="copyright"></div>
