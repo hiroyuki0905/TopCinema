@@ -17,8 +17,8 @@
       <% if user_signed_in? %>
         <li class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %></li>
       <% else %>
-        <li class="nav-lists__list"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
-        <li class="nav-lists__list"><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+        <li class="nav-lists__list"><%= link_to "新規登録", user_registration_path, class: 'post' %></li>
+        <li class="nav-lists__list"><%= link_to "ログイン", user_session_path, class: 'post' %></li>
       <% end %>
     </ul>
   </div>
@@ -33,7 +33,7 @@
         <div class="hero-text__main">TOPCINEMA</div>
       </div>
       <div class="service-btn">
-        <a href="<%= new_user_registration_path %>">新規登録</a>
+        <a href="<%= user_registration_path %>">新規登録</a>
       </div>
     </div>
   </div>
