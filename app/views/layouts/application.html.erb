@@ -8,33 +8,33 @@
   </head>
   <body>
     <!-- ヘッダー -->
-   <header class="header">
-  <div class="heading">
-    <h1 class="logo"><a href="index.html">TOPCINEMA</a></h1>
-  </div>
-  <div class="navbar">
-    <ul class="nav-lists">
-      <% if user_signed_in? %>
-        <li class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %></li>
-      <% else %>
-        <li class="nav-lists__list"><%= link_to "新規登録", user_registration_path, class: 'post' %></li>
-        <li class="nav-lists__list"><%= link_to "ログイン", user_session_path, class: 'post' %></li>
-      <% end %>
-    </ul>
-  </div>
-</header>
-
-<!-- トップページのメイン -->
-<div class="index-main">
-  <div class="hero">
-    <img class="hero-image" src="<%= asset_path('hero.jpg') %>">
-    <div class="hero-items">
-      <div class="hero-text">
-        <div class="hero-text__main">TOPCINEMA</div>
+    <header class="header">
+      <div class="heading">
+        <h1 class="logo"><a href="index.html">TOPCINEMA</a></h1>
       </div>
-      <div class="service-btn">
-        <a href="<%= user_registration_path %>">新規登録</a>
+      <div class="navbar">
+        <ul class="nav-lists">
+          <% if user_signed_in? %>
+            <li class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %></li>
+          <% else %>
+            <li class="nav-lists__list"><%= link_to "新規登録", user_registration_path, class: 'post' %></li>
+            <li class="nav-lists__list"><%= link_to "ログイン", user_session_path, class: 'post' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
+    <!-- トップページのメイン -->
+    <div class="index-main">
+      <div class="hero">
+        <img class="hero-image" src="<%= asset_path('hero.jpg') %>">
+        <div class="hero-items">
+          <div class="hero-text">
+            <div class="hero-text__main">TOPCINEMA</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <%= yield %>
+  </body>
+</html>
