@@ -30,21 +30,19 @@
     </header>
 
     <!-- トップページのメイン -->
-      <div class="cursor"></div>
-
-      <div class="shapes">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
-      </div>
-
-        <div class="content">
-          <h1>TOPCINEMA</h1>
-        </div>
-
-      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="script.js"></script>
+       <head>
+        <title>Dimensional transfer device</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+        <body>
+          <div class="delorean">
+            <div class="time-travel"></div>
+          </div>
+          <h1>Dimensional transfer device</h1>
+          <p>Experience the adventure!</p>
+          <i class="bi bi-camera-reels-fill"></i>
+        </body>
+        <script src="script.js"></script>
       <%= yield %>
   </body>
 </html>
