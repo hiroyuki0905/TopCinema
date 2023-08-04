@@ -7,14 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <!-- 新しいスタイルシートを追加 -->
     <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-    </style>
+        body {
+          margin: 0;
+          overflow: hidden;
+        }
+     </style>
   </head>
 
   <body>
@@ -41,9 +39,10 @@
         <% end %>
       </div>
     </header>
+     
     <%= yield %>
-    <footer></footer>
       <canvas id="canvas"></canvas>
       <%= javascript_pack_tag 'script' %>
+      <footer></footer>
   </body>
 </html>

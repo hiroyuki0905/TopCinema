@@ -52,7 +52,7 @@ class Car {
   }
 }
 
-const car = new Car(-150, canvas.height - 100, 10); // スピード調整
+const car = new Car(-150, canvas.height - 100, 5); // スピード調整
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
