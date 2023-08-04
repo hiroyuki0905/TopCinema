@@ -1,19 +1,14 @@
 <div class="contents row">
   <div class="container">
-    <h2>ログイン</h2>
-    <%# ログイン時のエラーメッセージ  %>
-    <div class='login-flash-message'>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
+    <h2>Log in</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
-        <%= f.label :eメール %><br />
+        <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :パスワード %><br />
+        <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
@@ -25,7 +20,7 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "ログイン" %>
+        <%= f.submit "Log in" %>
       </div>
     <% end %>
   </div>

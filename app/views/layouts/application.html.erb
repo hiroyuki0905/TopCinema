@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
     <title>TOPCINEMA</title>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- 新しいスタイルシートを追加 -->
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
+
   <body>
-    <!-- ヘッダー -->
     <header class="header">
-      <div class="heading">
-        <h1 class="logo"><a href="index.html">TOPCINEMA</a></h1>
-      </div>
-      <div class="navbar">
-        <ul class="nav-lists">
-          <% if user_signed_in? %>
-            <li class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "" %></li>
-          <% else %>
-            <li class="nav-lists__list"><%= link_to "新規登録", user_registration_path, class: 'post' %></li>
-            <li class="nav-lists__list"><%= link_to "ログイン", user_session_path, class: 'post' %></li>
-          <% end %>
-        </ul>
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">TOPCINEMA</a></h1>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <span><%= current_user.nickname %>
+            <ul class="user__info">
+              <li>
+                <%= link_to "マイページ", "/users/#{current_user.id}" %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+            </span>
+            <%= link_to "投稿する", new_tweet_path, class: "post" %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path, class: "get" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "get" %>
+          </div>
+        <% end %>
       </div>
     </header>
-
-    <!-- トップページのメイン -->
-       <head>
-        <title>Dimensional transfer device</title>
-        <link rel="stylesheet" href="styles.css" />
-      </head>
-        <body>
-          <div class="delorean">
-            <div class="time-travel"></div>
-          </div>
-          <h1>Dimensional transfer device</h1>
-          <p>Experience the adventure!</p>
-          <i class="bi bi-camera-reels-fill"></i>
-        </body>
-        <script src="script.js"></script>
-      <%= yield %>
+    <%= yield %>
+    <footer></footer>
+      <canvas id="canvas"></canvas>
+      <%= javascript_pack_tag 'script' %>
   </body>
 </html>
