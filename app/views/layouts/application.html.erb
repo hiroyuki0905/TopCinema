@@ -7,12 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.6.0.min.js', crossorigin: 'anonymous' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' %>
     <style>
         body {
           margin: 0;
           overflow: hidden;
         }
-     </style>
+    </style>
   </head>
 
   <body>
@@ -21,14 +23,13 @@
         <h1 class="grid-6"><a href="/">TOPCINEMA</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.nickname %>
+            <span><%= current_user.nickname %></span>
             <ul class="user__info">
               <li>
                 <%= link_to "マイページ", "/users/#{current_user.id}" %>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
-            </span>
             <%= link_to "投稿する", new_tweet_path, class: "post" %>
           </div>
         <% else %>
@@ -39,10 +40,40 @@
         <% end %>
       </div>
     </header>
-     
+
+    <div id="key_visual">
+      <div class="slider">
+        <div>
+          <%= image_tag 'img_bg01.jpg', alt: 'スライド画像01' %>
+        </div>
+        <div>
+          <%= image_tag 'img_bg02.jpg', alt: 'スライド画像02' %>
+        </div>
+        <div>
+          <%= image_tag 'img_bg03.jpg', alt: 'スライド画像03' %>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
-      <canvas id="canvas"></canvas>
-      <%= javascript_pack_tag 'script' %>
-      <footer></footer>
+
+    <canvas id="canvas"></canvas>
+    <%= javascript_pack_tag 'script' %>
+
+    <script>
+      $(function () {
+        // ハンバーガーメニュー
+        $("#drawer_toggle").click(function () {
+          $(this).toggleClass("open");
+          $("#global_nav").toggleClass("sp_open");
+        });
+
+        $(".slider").slick({
+          arrows: true,
+          dots: true,
+          autoplay: true,
+        });
+      });
+    </script>
   </body>
 </html>
