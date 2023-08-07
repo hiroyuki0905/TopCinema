@@ -881,6 +881,10 @@ div.contents.row div.content_post {
   background-position: center center;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  /* 画像を5分の4の大きさに縮小 */
+  background-size: 80%;
+  /* 車の位置を調整 */
+  background-position: center bottom;
 }
 
 div.contents.row div.content_post:after {
