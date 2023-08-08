@@ -882,9 +882,24 @@ div.contents.row div.content_post {
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   /* 画像を5分の4の大きさに縮小 */
-  background-size: 80%;
+  background-size: 60%;
   /* 車の位置を調整 */
   background-position: center bottom;
+}
+
+/* 画像スライダー用に調整されたCSS */
+.slider {
+  position: relative;
+  height: 600px; /* スライダーの高さ */
+  overflow: hidden;
+}
+
+.slider > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out; /* スライド間のトランジション */
 }
 
 div.contents.row div.content_post:after {
