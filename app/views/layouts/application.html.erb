@@ -41,21 +41,10 @@
       </div>
     </header>
 
-    <div id="key_visual">
-      <div class="slider">
-        <div>
-          <%= image_tag 'img_bg01.jpg', alt: 'スライド画像01' %>
-        </div>
-        <div>
-          <%= image_tag 'img_bg02.jpg', alt: 'スライド画像02' %>
-        </div>
-        <div>
-          <%= image_tag 'img_bg03.jpg', alt: 'スライド画像03' %>
-        </div>
-      </div>
-    </div>
+    
 
     <%= yield %>
+    
 
     <canvas id="canvas"></canvas>
     <%= javascript_pack_tag 'script' %>
