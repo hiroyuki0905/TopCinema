@@ -1,6 +1,6 @@
-<h1>ユーザー一覧</h1>
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
   <% end %>
-</ul>
+</div>

@@ -1,18 +1,22 @@
+// HTMLのcanvas要素から描画コンテキストを取得
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+// キャンバスのサイズをウィンドウの内側の大きさに合わせる
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Carクラスの定義
 class Car {
   constructor(x, y, speed) {
-    this.x = x;
-    this.y = y;
-    this.speed = speed;
-    this.width = 190;
-    this.height = 60;
+    this.x = x; // 車のx座標
+    this.y = y; // 車のy座標
+    this.speed = speed; // 車の速度
+    this.width = 190; // 車の幅
+    this.height = 60; // 車の高さ
   }
 
+  // 車を描画するメソッド
   draw() {
     ctx.fillStyle = "gray"; // 車の色を指定（灰色）
     ctx.beginPath(); // 新しいパスを開始
@@ -44,23 +48,29 @@ class Car {
     ctx.fillRect(this.x + 20, this.y - 61, this.width - 100, 15); // 窓の位置とサイズを指定
   }
 
+  // 車の位置を更新するメソッド
   update() {
-    this.x += this.speed;
+    this.x += this.speed; // 車のx座標に速度を加算
+
+    // 画面外に出た場合は、画面の左端に戻す
     if (this.x > canvas.width) {
       this.x = -this.width;
     }
   }
 }
 
-const car = new Car(-150, canvas.height - 230, 5); // スピード調整
+// Carクラスのインスタンスを生成し、初期位置と速度を指定
+const car = new Car(-150, canvas.height - 230, 4); // スピード調整
 
+// アニメーションを実行する関数
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // キャンバスをクリア
 
-  car.draw();
-  car.update();
+  car.draw(); // 車を描画
+  car.update(); // 車の位置を更新
 
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animate); // 次のフレームで再度animate関数を呼び出す
 }
 
+// 初回のアニメーションを開始
 animate();
