@@ -1,6 +1,14 @@
 <div class="contents row">
-  <% @tweets.each do |tweet| %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+  <% top_tweets = @tweets.first(3) %>
+  <% top_tweets.each do |tweet| %>
+    <div class="content_post">
+      <div class="more">
+        <ul class="more_list">
+          <li>
+            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+          </li>
+        </ul>
+      </div>
       <p><%= tweet.text %></p>
       <span class="name">
         <%= tweet.name %>
