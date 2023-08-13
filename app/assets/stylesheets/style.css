@@ -757,7 +757,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 62px;
+  height: 70px;
 }
 
 header.header div.header__bar.row {
@@ -900,6 +900,33 @@ div.contents.row div.content_post {
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease-in-out; /* スライド間のトランジション */
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.header__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 追加：縦方向の中央揃え */
+}
+
+.service-btn {
+  display: flex;
+  align-items: center; /* 追加：縦方向の中央揃え */
+}
+
+.service-btn a {
+  display: block;
+  padding: 10px 20px;
+  margin-right: 30px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
 div.contents.row div.content_post:after {
