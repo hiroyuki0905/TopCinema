@@ -25,7 +25,7 @@ class Car {
     ctx.lineTo(this.x + this.width, this.y + this.height - 70); // パスを引いて線を描画（右上）
     ctx.lineTo(this.x + this.width, this.y - 35); // パスを引いて線を描画（右下）
     ctx.lineTo(this.x + this.width - 200, this.y - 100); // パスを引いて線を描画（斜め上左）
-    ctx.lineTo(this.x + 10, this.y - 70); // パスを引いて線を描画（上辺）
+    ctx.lineTo(this.x + 10, this.y - 50); // パスを引いて線を描画（上辺）
     ctx.closePath(); // パスを閉じる
     ctx.fill(); // パス内を塗りつぶす
 

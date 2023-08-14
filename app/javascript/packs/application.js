@@ -20,7 +20,6 @@ require("channels");
 import "slick-carousel/slick/slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../stylesheets/slider.css"; // スタイルシートのパスは適宜変更してください
 
 document.addEventListener("turbolinks:load", () => {
   $(".slider").slick();
