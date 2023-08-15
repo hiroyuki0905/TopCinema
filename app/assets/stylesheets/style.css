@@ -764,6 +764,12 @@ header.header div.header__bar.row {
   position: relative;
 }
 
+header.header div.header__bar.row {
+  display: flex; /* Flexbox を有効にする */
+  justify-content: space-between; /* 要素間のスペースを均等に配置 */
+  align-items: center; /* 垂直方向に中央揃え */
+}
+
 header.header div.header__bar.row h1.grid-6 {
   font-size: 50px;
   line-height: 41px;
