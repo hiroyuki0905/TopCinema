@@ -882,27 +882,33 @@ body {
   align-items: center;
 }
 
+/* 二段に配置するためのスタイル */
 .service-btn {
-  display: flex; /* 子要素を横並びにする */
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2つずつの列を作成 */
+  gap: 20px; /* ボタン間の間隔 */
+  margin-top: 20px; /* 適宜調整 */
 }
 
-.service-btn a.button {
+.button {
   display: flex;
-  font-size: 30px;
-  padding: 10px 20px;
-  margin-right: 30px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.service-btn a.button img {
-  max-width: 30%;
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.button img {
+  max-width: 20%;
   height: auto;
-  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 div.contents.row div.content_post:after {
