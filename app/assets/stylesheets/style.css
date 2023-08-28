@@ -888,6 +888,7 @@ body {
   grid-template-columns: repeat(2, 1fr); /* 2つずつの列を作成 */
   gap: 20px; /* ボタン間の間隔 */
   margin-top: 20px; /* 適宜調整 */
+  font-size: 40px;
 }
 
 .button {
