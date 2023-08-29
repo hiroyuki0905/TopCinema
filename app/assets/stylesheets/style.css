@@ -882,24 +882,22 @@ body {
   align-items: center;
 }
 
-/* 二段に配置するためのスタイル */
 .service-btn {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2つずつの列を作成 */
-  gap: 20px; /* ボタン間の間隔 */
-  margin-top: 20px; /* 適宜調整 */
-  font-size: 40px;
+  display: flex;
+  flex-direction: column; /* アイテムを縦に配置 */
+  align-items: flex-start; /* アイテムを左寄せに配置 */
+  gap: 10px; /* ボタン間の間隔 */
+  margin-top: 20px; /* 適宜調整してください */
+  font-size: 20px;
 }
 
 .button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  width: 20%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  text-align: left; /* テキストを左寄せに配置 */
 }
 
 .button:hover {
@@ -907,7 +905,7 @@ body {
 }
 
 .button img {
-  max-width: 20%;
+  max-width: 10%;
   height: auto;
   margin-bottom: 5px;
 }
