@@ -596,7 +596,6 @@ ul li {
   width: auto;
   margin: 0;
   max-width: none;
-  *zoom: 1;
 }
 
 .row .row.collapse:before,
