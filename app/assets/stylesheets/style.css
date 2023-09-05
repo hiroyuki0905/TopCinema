@@ -375,10 +375,6 @@ embed {
   float: right;
 }
 
-.clearfix {
-  *zoom: 1;
-}
-
 .clearfix:after {
   content: "\0020";
   display: block;
@@ -888,15 +884,13 @@ body {
 
 .service-btn {
   display: flex;
-  flex-direction: column; /* アイテムを縦に配置 */
-  align-items: flex-start; /* アイテムを左寄せに配置 */
-  gap: 10px; /* ボタン間の間隔 */
-  margin-top: 20px; /* 適宜調整してください */
-  font-size: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .button {
-  width: 20%;
+  width: 50%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
