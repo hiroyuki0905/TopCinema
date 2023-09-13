@@ -886,11 +886,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 
 .button {
-  width: 50%;
+  width: 10%;
+  flex-wrap: wrap;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
