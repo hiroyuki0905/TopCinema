@@ -885,17 +885,15 @@ body {
 .service-btn {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .button {
-  width: 10%;
+  width: 30%;
   flex-wrap: wrap;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  text-align: left; /* テキストを左寄せに配置 */
 }
 
 .button:hover {
