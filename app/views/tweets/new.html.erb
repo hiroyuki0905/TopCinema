@@ -1,13 +1,14 @@
 <div class="contents row">
   <div class="container">
     <h3>ランキング投稿</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
-      <% (1..3).each do |rank| %>
-        <h4><%= "ランキング#{rank}位" %></h4>
-        <%= form.text_field "ranking_#{rank}_movie_name".to_sym, placeholder: "Movie Name" %>
-        
+    <div class="scrollable-form-container">
+      <%= form_with(model: @tweet, local: true) do |form| %>
+        <% (1..10).each do |rank| %>
+          <h4><%= "ランキング#{rank}位" %></h4>
+          <%= form.text_field "ranking_#{rank}_movie_name".to_sym, placeholder: "Movie Name" %>
+        <% end %>
+        <%= form.submit "SEND" %>
       <% end %>
-      <%= form.submit "SEND" %>
-    <% end %>
+    </div>
   </div>
 </div>

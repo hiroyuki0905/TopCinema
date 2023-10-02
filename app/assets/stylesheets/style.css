@@ -1115,3 +1115,11 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+/* CSSファイル内でスタイルを設定 */
+.scrollable-form-container {
+  max-height: 400px; /* 適切な高さを設定 */
+  overflow-y: auto; /* 縦方向のスクロールバーを表示 */
+  border: 1px solid #ccc; /* オプション：ボーダーを追加 */
+  padding: 10px; /* オプション：内部の余白を設定 */
+}
