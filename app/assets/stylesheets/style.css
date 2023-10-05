@@ -166,7 +166,7 @@ small {
  * Prevent `sub` and `sup` affecting `line-height` in all browsers. */
 sub,
 sup {
-  font-size: 75%;
+  font-size: 50%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -714,7 +714,7 @@ form input[type="submit"] {
 /* 新規登録とログインボタンのスタイル */
 .header__bar a.post {
   padding: 8px 20px;
-  font-size: 15px;
+  font-size: 12px;
   border: 2px solid #57c3e9;
   color: #57c3e9;
   font-weight: bold;
@@ -888,7 +888,7 @@ body {
 }
 
 .button {
-  width: 30%;
+  width: 50%;
   flex-wrap: wrap;
   padding: 10px;
   border: 1px solid #ccc;
