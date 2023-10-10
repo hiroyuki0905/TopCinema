@@ -12,8 +12,8 @@ class Car {
     this.x = x; // 車のx座標
     this.y = y; // 車のy座標
     this.speed = speed; // 車の速度
-    this.width = 190; // 車の幅
-    this.height = 60; // 車の高さ
+    this.width = 185; // 車の幅
+    this.height = 50; // 車の高さ
   }
 
   // 車を描画するメソッド
