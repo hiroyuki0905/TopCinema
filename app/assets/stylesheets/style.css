@@ -65,6 +65,7 @@ html {
  * Remove default margin. */
 body {
   margin: 0;
+  background-color: #57c3e9;
 }
 
 /* ==========================================================================
@@ -643,7 +644,7 @@ ul li {
 body,
 html {
   height: 100%;
-  background-color: #f5f5f3;
+  background-color: aqua;
 }
 
 body {
