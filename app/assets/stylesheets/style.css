@@ -65,7 +65,7 @@ html {
  * Remove default margin. */
 body {
   margin: 0;
-  background-color: #57c3e9;
+  background-color: #74e957;
 }
 
 /* ==========================================================================
@@ -645,6 +645,14 @@ body,
 html {
   height: 100%;
   background-color: aqua;
+}
+
+#topcinema {
+  font-size: 100px; /* Set the desired font size */
+}
+
+h1 a {
+  font-size: 36px; /* 例: 36ピクセルに設定 */
 }
 
 body {
