@@ -911,7 +911,7 @@ body {
 }
 
 .button:hover {
-  background-color: #f0f0f0;
+  background-color: #4f14d7;
 }
 
 .button img {
@@ -1003,7 +1003,7 @@ div.contents.row div.content_post .more ul.more_list li a {
 }
 
 div.contents.row div.content_post .more ul.more_list li a:hover {
-  background-color: #57c3e9;
+  background-color: #4f14d7;
   color: #fff;
 }
 
@@ -1074,7 +1074,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #4f14d7;
 }
 
 .container {
