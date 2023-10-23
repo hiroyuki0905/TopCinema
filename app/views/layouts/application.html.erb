@@ -9,13 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://code.jquery.com/jquery-3.6.0.min.js', crossorigin: 'anonymous' %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' %>
-    <style>
-        body {
-          margin: 0;
-
-          overflow: hidden;
-        }
-    </style>
+    
   </head>
 
   <body>
@@ -24,36 +18,30 @@
         <h1 class="grid-6"><a href="/">TOPCINEMA</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.nickname %>
-               <ul class="user__info">
-                 <li>
-                   <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                 </li>
-               </ul>
-            </span>
+            <span><%= current_user.nickname %></span>
+            <ul class="user__info">
+              <li>
+                <%= link_to "マイページ", "/users/#{current_user.id}" %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
             <%= link_to "ランキング投稿", new_tweet_path, class: "post" %>
           </div>
         <% else %>
           <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-            
+            <div class="auth_links">
+              <%= link_to "ログイン", new_user_session_path, class: "post" %>
+              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            </div>
           </div>
         <% end %>
       </div>
-        <div id="topcinema">TOPCINEMA</div>
+      <div id="topcinema">TOPCINEMA</div>
     </header>
-      
+        
     <%= yield %>
-        
-        
-
         
     <canvas id="canvas"></canvas>
     <%= javascript_pack_tag 'script' %>
-    
-
-    
   </body>
 </html>

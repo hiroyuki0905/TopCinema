@@ -765,7 +765,7 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 header.header {
   padding: 10px;
   border-bottom: 1px solid #d8d8d8;
-  background-color: #fff;
+  background-: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -1029,7 +1029,7 @@ div.contents.row div.content_post span.name {
 
 div.contents.row div.content_post span.name a {
   display: block;
-  color: #aaa;
+  color: #4f14d7;
 }
 
 div.contents.row div.content_post span.name a:hover {
@@ -1089,7 +1089,7 @@ form input[type="submit"]:hover {
   margin: 0 0 20px;
   text-align: center;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 30px;
   color: #666;
 }
 
