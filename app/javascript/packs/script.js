@@ -60,7 +60,7 @@ class Car {
 }
 
 // Carクラスのインスタンスを生成し、初期位置と速度を指定
-const car = new Car(-150, canvas.height - 230, 2); // スピード調整
+const car = new Car(-150, canvas.height - 230, 4); // スピード調整
 
 // アニメーションを実行する関数
 function animate() {
